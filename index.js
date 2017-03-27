@@ -24,6 +24,9 @@ module.exports = (siteRoot, options) => {
     masterKey: process.env.MASTER_KEY || 'masterKey',
     databaseURI: process.env.DATABASE_URI || 'mongodb://localhost:27017/dev',
     serverURL: (process.env.SERVER_URL || 'http://localhost:1337') + '/parse',
+    liveQuery: {
+      className: process.env.LIVE_QUERY
+    },
     cloud: siteRoot + '/cloud/main.js',
     logFolder: siteRoot + '/logs',
     filesAdapter: () => {
