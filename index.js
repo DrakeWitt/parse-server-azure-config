@@ -25,7 +25,7 @@ module.exports = (siteRoot, options) => {
     databaseURI: process.env.DATABASE_URI || 'mongodb://localhost:27017/dev',
     serverURL: (process.env.SERVER_URL || 'http://localhost:1337') + '/parse',
     liveQuery: {
-      className: ["LiveTime"]
+      classNames: ["LiveTime"] // List of classes to support for query subscriptions
     },
     cloud: siteRoot + '/cloud/main.js',
     logFolder: siteRoot + '/logs',
